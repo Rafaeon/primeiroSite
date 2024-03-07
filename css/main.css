@@ -22,11 +22,13 @@ padding: 16px;
 width: 70%;
 
 }
+
 .redes-sociais ul li {
 margin-left: 25px;
 display: inline-block;
 float: left;
 }
+
 .redes-sociais {
 width: 20%;
 float: right;
@@ -114,22 +116,35 @@ button.slick-next {
     top: 35%;
     right: 14%;
 }
-
-/*.slider-principal img {*/
-   /* width: 100%!important;
+/*
+.slick-list {
+    width: 100%!important;
 }*/
 
-ul.slick-dots li {
-    display: inline-block;
-    font-size: 0px;
-    border: 3px solid #ffff;
-    border-radius: 50%;
-    width: 20px;
-    height: 20px;
-    
+.slick-initialized {
+    overflow: hidden;
+
 }
-
-ul.slick-dots li.slick-active {
-    background-color: #00bac6;
-
+.slick-dots li button {
+    font-size: 0px;
+    border: 5px solid #ffffff;
+    width: 26px;
+    height: 26px;
+    background: transparent;
+    border-radius: 50px ;
+    cursor: pointer;
+}
+.slick-dots {
+    margin: 0 auto;
+    width: 50%;
+    position: absolute;
+    right: 5%;
+    top: 94%;
+}
+li.slick-active button {
+    background: #00bac6;
+}
+.slick-dots li {
+    padding-left: 10px;
+    display: inline-block;
 }
