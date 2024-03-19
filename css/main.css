@@ -27,18 +27,23 @@ main,
     float: left;
     padding: 16px;
     width: 70%;
+    margin-top: 10;
 
 }
 
 .redes-sociais ul li {
     margin-left: 25px;
     display: inline-block;
-    float: left;
+    float: right;
+    list-style: none;
+    
 }
 
 .redes-sociais {
-    width: 20%;
+    width: 70%;
     float: right;
+    margin-top: -50;
+    
 }
 
 .header-2 {
@@ -112,9 +117,10 @@ button.slick-prev {
     height: 51px;
     width: 25px;
     z-index: 9;
+    background-color: transparent;
     position: absolute;
-    background-image: url(..img/png-clipart-arrow-computer-icons-arrow-angle-triangle.png);
-    top: 35%;
+    background-image: url(../img/anterior.png);
+    top: 46%;
     left: 14%;
 }
 
@@ -124,9 +130,10 @@ button.slick-next {
     height: 51px;
     width: 25px;
     z-index: 9;
+    background-color: transparent;
     position: absolute;
-    background-image: url(..img/png-clipart-arrow-computer-icons-arrow-angle-triangle.png);
-    top: 35%;
+    background-image: url(../img/proximo.png);
+    top: 46%;
     right: 14%;
 }
 
@@ -204,8 +211,8 @@ li.slick-active button {
 .bloco-imagem {
     height: 300px;
     border: 1px solid #c5c5c5;
-    padding-top: 15px;
-    padding-bottom: 15 px;
+    padding-top: 20px;
+    padding-bottom: 20px;
     padding-left: 29px;
     padding-right: 29px;
     margin-left: 10px;
@@ -234,9 +241,13 @@ h3 {
     background-color: #eeeeee;
 }
 .bloco-imagens-texto:before {
-    content: "<<<";
-    color: red;
+    width: 100%;
     display: inline-block;
-    font-size: 16px;
+    content: "";
+    height: 52px;
+    background: #ffffff;
+    background-image: url(../img/setinha.png);
+    background-repeat: no-repeat;
+    background-position: center;
 
 }
