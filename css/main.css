@@ -22,6 +22,25 @@ main,
     position: relative;
 }
 
+
+.mapBox {
+    position: relative;
+    width: 500px;
+    height: 500px;
+    left: 49%;
+    padding-top: 10px;
+    top: 10%;
+}
+
+.mapBox iframe {
+    border: 10px;
+    padding-right: 10px;
+    width: 100%;
+    height: 100%;
+    float: left;
+    position: relative;
+}
+
 .logo {
     float: left;
     padding: 16px;
