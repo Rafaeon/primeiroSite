@@ -11,7 +11,7 @@ ul {
 
 .menu-principal {
     background-color: rgb(1, 10, 10);
-    width: 100%;
+    width: 1920;
     height: 80px;
 }
 
@@ -60,7 +60,7 @@ main,
 .redes-sociais {
     width: 70%;
     float: right;
-    margin-top: -50;
+    margin-top: -60;
     
 }
 
@@ -109,17 +109,18 @@ main,
 
 }
 
-.busca {
+input .busca {
     width: 30%;
     float: left;
     text-align: center;
 }
 
-.busca input {
+input {
     background-image: url('../img/icons8-search-30.png');
     background-repeat: no-repeat;
     background-position: 95%;
-    margin-top: -5px;
+    margin-top: 101px;
+    margin-left: -60;
     height: 30px;
     padding: 12px;
     width: 190px;
@@ -268,7 +269,6 @@ h3 {
     content: "";
     height: 52px;
     background: #ffffff;
-    background-image: url(../img/setinha.png);
     background-repeat: no-repeat;
     background-position: center;
 
@@ -350,12 +350,14 @@ h3 {
 .footer {
     background-image: url(../img/footer.png);
     color: white;
+    width: 1920;
 }
 
 .footer-2 {
     background-image: url('../img/footer2.png');
     color: #c1c1c1;
     height: 90px;
+    width: 1920;
 }
 .local:before, .emailico:before, .telefoneico:before {
     content: '';

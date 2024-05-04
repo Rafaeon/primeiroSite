@@ -1,4 +1,3 @@
-
 <head>
     <link rel="stylesheet" type="text/css" href="css/main.css">
     <link rel="stylesheet" type="text/css" href="./css/slick.css" />
@@ -10,18 +9,18 @@
         <main>
             <div class="header-1">
                 <div class="logo">
-                    <img src="../projeto faculdade/img/logo (1).png"/>
+                    <img src="../projeto faculdade/img/logo.png" width="50" height="50" />
                 </div>
                 <div class="redes-sociais">
                     <ul>
-                        <li><a href="https://twitter.com/Gotico_suaveiro"><img src="../projeto faculdade/img/tw.png"
-                                    /></a></li>
+                        <li><a href="https://twitter.com/Gotico_suaveiro"><img
+                                    src="../projeto faculdade/img/tw.png" /></a></li>
                         <li><a href="https://www.instagram.com/gotico_suaveiro/"><img
                                     src="../projeto faculdade/img/rss.png" /></a></li>
-                        <li><a href="https://www.linkedin.com/in/rafael-torres-799523231/"><img src="../projeto faculdade/img/linkedin.png"
-                                         /></a></li>
+                        <li><a href="https://www.linkedin.com/in/rafael-torres-799523231/"><img
+                                    src="../projeto faculdade/img/linkedin.png" /></a></li>
                         <li><a href="https://www.instagram.com/gotico_suaveiro/"><img
-                                        src="../projeto faculdade/img/face.png"  /></a></li>
+                                    src="../projeto faculdade/img/face.png" /></a></li>
                     </ul>
                 </div>
             </div>
@@ -32,32 +31,45 @@
         <div class="header-2">
             <div class="menu">
                 <ul>
-                    <li><a href="">Home</a></li>
-                    <li><a href="">About</a></li>
-                    <li><a href="">Service</a></li>
+                    <li><a href="view/praias.html">praias</a></li>
+                    <li><a href="view/trilhas.html">Trilhas</a></li>
+                    <li><a href="view/restaurante.html">Restaurantes</a></li>
                     <li><a href="">Pages</a></li>
                     <li><a href="">Blog</a></li>
                     <li><a href="">Contact</a></li>
                 </ul>
             </div>
         </div>
-        <div class="busca">
-            <input placeholder="Search Something" type="text" />
-        </div>
-
     </main>
-      <div class="col-100">
-          <div class="slider-principal">
-            <img src="./img/florianopolis-65-c.jpg"  width="50"/>
-            <img src="./img/florianopolis-65-c.jpg"  width="50"/>
-            <img src="./img/florianopolis-65-c.jpg"  width="50"/>
-            <img src="./img/florianopolis-65-c.jpg"  width="50"/>
-          </div> 
-      </div>
+    <div class="col-100">
+        <div class="slider-principal">
+            <img src="./img/florianopolis-65-c.jpg" width="50" />
+            <img src="./img/florianopolis-65-c.jpg" width="50" />
+            <img src="./img/florianopolis-65-c.jpg" width="50" />
+            <img src="./img/florianopolis-65-c.jpg" width="50" />
+        </div>
+    </div>
     <div class="mapBox">
-    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d56572.87907831329!2d-48.628149485720584!3d-27.599576387373155!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x952737ce84a6557f%3A0x8eeb6ad0e3aaa548!2sAv.%20Gov.%20Ivo%20Silveira%2C%202716%20-%20Estreito%2C%20Florian%C3%B3polis%20-%20SC%2C%2088085-001!5e0!3m2!1spt-BR!2sbr!4v1712193746641!5m2!1spt-BR!2sbr" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-   </div>   
-      <div class="col-100 bloco-texto">
+        <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d56572.87907831329!2d-48.628149485720584!3d-27.599576387373155!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x952737ce84a6557f%3A0x8eeb6ad0e3aaa548!2sAv.%20Gov.%20Ivo%20Silveira%2C%202716%20-%20Estreito%2C%20Florian%C3%B3polis%20-%20SC%2C%2088085-001!5e0!3m2!1spt-BR!2sbr!4v1712193746641!5m2!1spt-BR!2sbr"
+            style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+    <div class="busca">
+        <input placeholder="Pesquisar no mapa" type="text" />
+    </div>
+    <script>
+        document.querySelector('.busca').addEventListener('keyup', function (event) {
+            if (event.key === 'Enter') {
+                // Captura o valor digitado na barra de busca
+                var query = this.value;
+
+                // Atualiza o src do iframe com a nova consulta
+                var iframe = document.querySelector('.mapBox');
+                iframe.src = 'https://www.google.com/maps/embed/v1/place?q=' + encodeURIComponent(query) + '//usar sua API';
+            }
+        });
+    </script>
+    <!---<div class="col-100 bloco-texto">
         <div class="content texto-destaque">
             <h1>
                 Lorem <strong>ipsum simply dummy</strong> sit amet.
@@ -80,142 +92,147 @@
             <div class="col-3 bloco-texto">
                 <img src="./img/icons8-fotos-100.png" />
                 <h3><b>Lorem ipsum</b> is simply</h3>
-                <p>Lorem piranha dolor sit amet, consectetur adipiscing elit. Sed vitae consequat nisi. Integer nec nulla
+                <p>Lorem piranha dolor sit amet, consectetur adipiscing elit. Sed vitae consequat nisi. Integer nec
+                    nulla
                     eu dui lacinia lacinia. Ut eleifend scelerisque sapien, id bibendum urna facilisis vitae. </p>
             </div>
-       </div>
-       <div class="col-100 bloco-imagens-texto">
-         <div class="content" style="margin-left: 24%; float: left;">
-            <div class="col-3 bloco-texto bloco-imagem">
-                <img src="./img/imagem1.png">
-                <p><b>Lorem Ipsum is simply</b></p>
-                <p>Lorem Ipsum is simply dummy text of the printing and typesetting of the
-                        industry. Lorem
-                        Ipsum has been
-                        the and scrambled it.
-                        atype specimen
-            </p>
-       </div>
-       <div class="col-3 bloco-texto bloco-imagem">
-            <img src="./img/imagem2.png">
-            <p><b>Lorem Ipsum is simply</b></p>
-            <p>Lorem Ipsum is simply dummy text of the printing and typesetting of the
-                        industry. Lorem
-                        Ipsum has been
-                        the and scrambled it.
-                        atype specimen
-                </p>
-      </div>
-      <div class="col-3 bloco-texto bloco-imagem">
-            <img src="./img/imagem2.png">
-            <p><b>Lorem Ipsum is simply</b></p>
-            <p>Lorem Ipsum is simply dummy text of the printing and typesetting of the
-                        industry. Lorem
-                        Ipsum has been
-                        the and scrambled it.
-                        atype specimen
-            </p>                   
-      </div>
-      <div class="content">
-        <div class="col-3 bloco-texto bloco-imagem">
-                    <img src="./img/TRILHAGRAVATA.jpg">
-                    <p><b>Trilha do Gravatá</b></p>
-                    <p>A Trilha do Gravatá é uma trilha de nível moderado localizada na Costa da Lagoa em Florianópolis, Brasil. Com cerca de 2,8 km de extensão e duração de 1h30 a 2 horas, a trilha apresenta subidas e descidas íngremes, pedras e raízes de árvores no caminho
+        </div> -->
+        <div class="col-100 bloco-imagens-texto">
+            <div class="content" style="margin-left: 24%; float: left;">
+                <div class="col-3 bloco-texto bloco-imagem">
+                    <img src="./img/mariagourmet.jpg">
+                    <p><b><a href="view/restaurante.html">Restaurante Maria Gourmet</a></b></p>
+                    <p>Ótima variedade e qualidade, o preço (43,90/kg) é maior que a média da localidade porém compensa
+                        pela qualidade.
+                        A vista da Janela é marivilhosa, temos uma visão panorâmica do mercado público
                     </p>
-        </div>
-        <div class="col-3 bloco-texto bloco-imagem">
-                <img src="./img/trilha lagoinha.jpg">
-                <p><b>Trilha da Lagoinha do Leste</b></p>
-                <p>
-                    A Lagoinha do Leste fica entre a Praia do Matadeiro e Pântano do Sul, no Sul da Ilha de Santa Catarina. Logo, os dois principais acessos começam a partir dessas praias vizinhas e proporcionam experiências diferentes para quem quer chegar até a praia.
-                </p>
-        </div>
-        <div class="col-3 bloco-texto bloco-imagem">
-                <img src="./img/costa da lagoa.jpg">
-                 <p><b>Trilha da Costa da Lagoa</b></p>
-                 <p>A trilha tem esse nome (Trilha Costa da Lagoa) porque termina, justamente, na comunidade Costa da Lagoa, a qual está à beira da Lagoa da Conceição.
+                </div>
+                <div class="col-3 bloco-texto bloco-imagem">
+                    <img src="./img/quierocafe2.jpg">
+                    <p><b><a href="view/restaurante.html">Quiero Café</a></b></p>
+                    <p>Cafeteria focada em doces, ótimo ambiente.
+                    </p>
+                </div>
+                <div class="col-3 bloco-texto bloco-imagem">
+                    <img src="./img/joaquina.jpeg">
+                    <p><b><a href="view/praias.html">Praia da Joaquina</a></b></p>
+                    <p>Praia com uma natureza exuberante, excelente para amantes do surf. Águas geladas, mas límpidas.
+                        Possui alguns restaurantes em frente ao mar. O "muito bom" fica por conta das dunas, que são
+                        lindas e renderam uma tarde divertidíssima com as crianças.
+                    </p>
+                </div>
+                <div class="content">
+                    <div class="col-3 bloco-texto bloco-imagem">
+                        <img src="./img/TRILHAGRAVATA.jpg">
+                        <p><b><a href="view/trilhas.html">Trilha do Gravatá</a></b></p>
+                        <p>A Trilha do Gravatá é uma trilha de nível moderado localizada na Costa da Lagoa em
+                            Florianópolis, Brasil. Com cerca de 2,8 km de extensão e duração de 1h30 a 2 horas, a trilha
+                            apresenta subidas e descidas íngremes, pedras e raízes de árvores no caminho
+                        </p>
+                    </div>
+                    <div class="col-3 bloco-texto bloco-imagem">
+                        <img src="./img/trilha lagoinha.jpg">
+                        <p><b><a href="view/trilhas.html">Trilha da Lagoinha do Leste</a></b></p>
+                        <p>
+                            A Lagoinha do Leste fica entre a Praia do Matadeiro e Pântano do Sul, no Sul da Ilha de
+                            Santa Catarina. Logo, os dois principais acessos começam a partir dessas praias vizinhas e
+                            proporcionam experiências diferentes para quem quer chegar até a praia.
+                        </p>
+                    </div>
+                    <div class="col-3 bloco-texto bloco-imagem">
+                        <img src="./img/costa da lagoa.jpg">
+                        <p><b><a href="view/trilhas.html">Trilha da Costa da Lagoa</a></b></p>
+                        <p>A trilha tem esse nome (Trilha Costa da Lagoa) porque termina, justamente, na comunidade
+                            Costa da Lagoa, a qual está à beira da Lagoa da Conceição.
 
-                    Aliás, se trata de um lugar muito bonito, onde você encontra diversos restaurantes.
-                </p>
+                            Aliás, se trata de um lugar muito bonito, onde você encontra diversos restaurantes.
+                        </p>
+                    </div>
+                </div>
             </div>
-        </div>
-        </div>
-        <div class="col-100 bloco-logos">
-            <div class="content">
-                <div class="col-4">
-                    <img alt="bubble" title="bubble" src="../projeto faculdade/img/logo1.png"/>
-            </div>
-            <div class="col-4">
-                    <img alt="Leopardis media" title="Leopardis media" src="../projeto faculdade/img/logo2.png"/>
-
-            </div>
-            <div class="col-4">
-                    <p></p>
-                    <img alt="Behance" title="Behance" src="../projeto faculdade/img/logo3.png"/>
-            </div>
-            <div class="col-4">
-                    <img alt="Puma" title="Puma" src="../projeto faculdade/img/logo4.png"/>
-            </div>
-           </div>
-        </div>
-        <footer>
-            <div class="col-100 footer">
+            <div class="col-100 bloco-logos">
                 <div class="content">
                     <div class="col-4">
-                        <h3><B>Popular Post</B></h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                        <p class="clock">25-setembro-2024</p>
-                        </p>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                        <p class="clock">25-setembro-2024</p>
-                </div>
-                <div class="col-4">
-                    <h3><B>Tags</B></h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla nec velit nec arcu scelerisque sodales. Sed auctor odio non venenatis scelerisque. Vestibulum quis justo vel quam tincidunt tincidunt. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae;</p>
-                      
-    
-                </div>
-                <div class="col-4">
-                    <h3><B>A little about us</B></h3>
-                    <p>Fusce vitae interdum libero. Sed id nisi <strong>IPSUM</strong> fermentum condimentum. Aliquam id nisi et dui <strog>ACCSUM</strog>ultricies . Sed tincidunt, lorem a pretium dapibus, risus lacus fermentum nunc, ut volutpat orci magna id nunc</p>
-                    <p>risus lacus <STRONG>PUTA</STRONG>fermentum nunc, ut volutpat orci magna id nunc</p>
-                       
-                </div>
-                <div class="col-4">
-                    <h3><B>Get in touch</B></h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit Sed auctor odio non venenatis scelerisque. Vestibulum quis justo vel quam tincidunt tincidunt. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae;
+                        <img alt="floripa mil grau" title="bubble" src="../projeto faculdade/img/floripa milgrau.png" width="100px" height="100px" />
+                    </div>
+                    <div class="col-4">
+                        <img alt="Leopardis media" title="Leopardis media" src="../projeto faculdade/img/logo2.png" />
 
-                    </p>
-                    <p class="local">Texas, US</p>
+                    </div>
+                    <div class="col-4">
+                        <p></p>
+                        <img alt="Behance" title="Behance" src="../projeto faculdade/img/logo3.png" />
+                    </div>
+                    <div class="col-4">
+                        <img alt="Puma" title="Puma" src="../projeto faculdade/img/logo4.png" />
+                    </div>
+                </div>
+            </div>
+            <footer>
+                <div class="col-100 footer">
+                    <div class="content">
+                        <div class="col-4">
+                            <h3><B>Popular Post</B></h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                            <p class="clock">25-setembro-2024</p>
+                            </p>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                            <p class="clock">25-setembro-2024</p>
+                        </div>
+                        <div class="col-4">
+                            <h3><B>Tags</B></h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla nec velit nec arcu
+                                scelerisque sodales. Sed auctor odio non venenatis scelerisque. Vestibulum quis justo
+                                vel quam tincidunt tincidunt. Vestibulum ante ipsum primis in faucibus orci luctus et
+                                ultrices posuere cubilia Curae;</p>
+
+
+                        </div>
+                        <div class="col-4">
+                            <h3><B>A little about us</B></h3>
+                            <p>Fusce vitae interdum libero. Sed id nisi <strong>IPSUM</strong> fermentum condimentum.
+                                Aliquam id nisi et dui <strog>ACCSUM</strog>ultricies . Sed tincidunt, lorem a pretium
+                                dapibus, risus lacus fermentum nunc, ut volutpat orci magna id nunc</p>
+                            <p>risus lacus <STRONG>PUTA</STRONG>fermentum nunc, ut volutpat orci magna id nunc</p>
+
+                        </div>
+                        <div class="col-4">
+                            <h3><B>Get in touch</B></h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit Sed auctor odio non venenatis
+                                scelerisque. Vestibulum quis justo vel quam tincidunt tincidunt. Vestibulum ante ipsum
+                                primis in faucibus orci luctus et ultrices posuere cubilia Curae;
+
+                            </p>
+                            <p class="local">Texas, US</p>
                             <p class="emailico">email@email.com"</p>
-                                   <p class="telefoneico">890-09090-35000</p>
+                            <p class="telefoneico">890-09090-35000</p>
+                        </div>
+                    </div>
                 </div>
-               </div>
-            </div>
-        </footer>
-        <div class="col-100 footer-2">
-            <div class="content">
-
-                <p>
-                    There are many variations of passages of Lorem Ipsum available, but the majority have suffered
-                </p>
-                <div class="redes-sociais">
-                    <ul>
-                        <li><a href="https://twitter.com/Gotico_suaveiro"><img src="../projeto faculdade/img/tw.png"
-                                    /></a></li>
-                        <li><a href="https://www.instagram.com/gotico_suaveiro/"><img
-                                    src="../projeto faculdade/img/rss.png" /></a></li>
-                        <li><a href="https://www.linkedin.com/in/rafael-torres-799523231/"><img src="../projeto faculdade/img/linkedin.png"
-                                         /></a></li>
-                        <li><a href="https://www.instagram.com/gotico_suaveiro/"><img
-                                        src="../projeto faculdade/img/face.png"  /></a></li>
-                    </ul>
-            </div>
-        </div>
-        <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
-        <script type="text/javascript" src="./js/jquery-migrate.js"></script>
-        <script type="text/javascript" src="./js/slick.min.js"></script>
-        <script type="text/javascript" src="./js/main.js"></script>
+            </footer>
+            <div class="col-100 footer-2">
+                <div class="content">
+                
+                    <p>
+                        
+                    </p>
+                    <div class="redes-sociais">
+                        <ul>
+                            <li><a href="https://twitter.com/Gotico_suaveiro"><img
+                                        src="../projeto faculdade/img/tw.png" /></a></li>
+                            <li><a href="https://www.instagram.com/gotico_suaveiro/"><img
+                                        src="../projeto faculdade/img/rss.png" /></a></li>
+                            <li><a href="https://www.linkedin.com/in/rafael-torres-799523231/"><img
+                                        src="../projeto faculdade/img/linkedin.png" /></a></li>
+                            <li><a href="https://www.instagram.com/gotico_suaveiro/"><img
+                                        src="../projeto faculdade/img/face.png" /></a></li>
+                        </ul>
+                    </div>
+                </div>
+                <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+                <script type="text/javascript" src="./js/jquery-migrate.js"></script>
+                <script type="text/javascript" src="./js/slick.min.js"></script>
+                <script type="text/javascript" src="./js/main.js"></script>
 </body>
 
 </html>
